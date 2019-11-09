@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 引用外部文件，可以在不同的頁面中同時使用，也可以利用browser的緩存機制 -->
+    <!-- script標簽一旦用於引入外部文件，就不能在內部編寫js代碼 -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- 在script標簽內部編寫js代碼 -->
+    <script type="text/javascript">
+        // 向browser body中輸出一個內容 
+        document.write("Hello, Mario");
+        // 向browser console中輸出一個內容
+        console.log('Component mounted.');
+    </script>
+</head>
+<body>
+    <!-- 在標簽的屬性中編寫js代碼 -->
+    <button onclick="alert('Submit successfully');">Submit</button>
+    <a href="javascript:alert('You clicked me');">Test Link One</a>
+    <a href="javascript:;">Test Link Two</a>
+</body>
+</html> 
