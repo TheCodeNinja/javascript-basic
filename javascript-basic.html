@@ -7,10 +7,30 @@
     <title>Document</title>
 
     <script type="text/javascript">
-        // Boolean類型表示值為true/false
-        var a = true; // No double quote
-        console.log(a); // Return true
-        console.log(typeof a); // Return boolean
+        // Number中的最大數值：Number.MAX_VALUE
+        // Number中零以上的最小值：Number.MIN_VALUE
+        console.log(Number.MAX_VALUE); // return 1.7976931348623157e+308
+        console.log(Number.MIN_VALUE); // return 5e-324
+        
+        var a = Number.MAX_VALUE * Number.MAX_VALUE;
+        console.log(a); // return Infinity
+
+        var b = -Number.MAX_VALUE * Number.MAX_VALUE;
+        console.log(b); // return -Infinity
+
+        var c = Infinity;
+        console.log(typeof c); // return number
+
+        var d = "abc" * "def";
+        console.log(d); // return NaN
+
+        var e = NaN;
+        console.log(typeof e); // return number
+
+        // float calculation
+        // Note: don't use js for precise calculation requirement
+        var f = 0.1 + 0.3;
+        console.log(f); // return 0.3000000000000004
     </script>
 </head>
 <body>
