@@ -7,67 +7,25 @@
     <title>Document</title>
 
     <script type="text/javascript">
-        /* 轉化為Number類型 */
+        /* 其它進制的數字 */
 
-        /* 方法一: Number() */
+        // 十六進制 (以0x開頭)
+        var a = 0x10;
+        console.log(a); // Return 16
 
-        // String -> Number
-        var a = "123";
-        var b = Number(a);
-        console.log(typeof a); // Return string
-        console.log(typeof b); // Return number
+        var b = 0xff;
+        console.log(b); // Return 255
 
-        var c = "abc";
-        var d = Number(c);
-        console.log(typeof c); // Return string
-        console.log(typeof d); // Return number
-        console.log(d); // Return NaN
+        // 八進制 (以0開頭)
+        var c = 070;
+        console.log(c); // Return 56
 
-        var e = ""; // var e = "    "
-        var f = Number(e);
-        console.log(typeof e); // Return string
-        console.log(typeof f); // Return number
-        console.log(f); // Return 0
+        // 二進制 (以0b開頭)
+        var d = 0b10;
+        console.log(d); // Return 2
 
-        // Boolean -> Number
-        var g = true;
-        var h = Number(g);
-        console.log(typeof g); // Return boolean
-        console.log(typeof h); // Return number
-        console.log(h); // Return 1
-
-        // Null -> Number
-        var i = null;
-        var j = Number(i);
-        console.log(typeof i); // Return object
-        console.log(typeof j); // Return number
-        console.log(j); // Return 0
-
-        // Undefined -> Number
-        var k = undefined;
-        var m = Number(k);
-        console.log(typeof k); // Return undefined
-        console.log(typeof m); // Return number
-        console.log(m); // Return NaN
-
-        /* 方法二: parseInt(), parseFloat() */
-
-         // String -> Number (Int)
-        var n = "123a567px"; // 123.456
-        var p = parseInt(n);
-        console.log(typeof n); // Return string
-        console.log(typeof p); // Return number
-        console.log(p); // Return 123
-
-        // String -> Number (Float)
-        var q = "123.456px";
-        var r = parseInt(q);
-        console.log(typeof q); // Return string
-        console.log(typeof r); // Return number
-        console.log(r); // Return 123.456
-
-        // Boolean -> Number
-        // Return NaN
+        var e = "070";
+        e = parseInt(e, 10); // 以十進制轉換
     </script>
 </head>
 <body>
