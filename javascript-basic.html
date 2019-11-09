@@ -7,25 +7,40 @@
     <title>Document</title>
 
     <script type="text/javascript">
-        /* 其它進制的數字 */
+        /* 轉換為Boolean類型 */
 
-        // 十六進制 (以0x開頭)
-        var a = 0x10;
-        console.log(a); // Return 16
+        /* Boolean() */
 
-        var b = 0xff;
-        console.log(b); // Return 255
+        // Number -> Boolean
+        var a = 123; // -123, Infinity
+        a = Boolean(a);
+        console.log(typeof a); // Return boolean
+        console.log(a); // Return true
 
-        // 八進制 (以0開頭)
-        var c = 070;
-        console.log(c); // Return 56
+        var b = 0 // NaN
+        b = Boolean(b);
+        console.log(typeof b); // Return boolean
+        console.log(b); // Return false
 
-        // 二進制 (以0b開頭)
-        var d = 0b10;
-        console.log(d); // Return 2
+        // String -> Boolean
+        var c = "false"; // " " 
+        c = Boolean(c);
+        console.log(typeof c); // Return boolean
+        console.log(c); // Return true
 
-        var e = "070";
-        e = parseInt(e, 10); // 以十進制轉換
+        var d = ""; 
+        d = Boolean(d);
+        console.log(typeof d); // Return boolean
+        console.log(d); // Return false
+
+        // Null -> Boolean
+        // Return false
+
+        // Undefined -> Boolean
+        // Return false
+
+        // Object -> Boolean
+        // Return true
     </script>
 </head>
 <body>
