@@ -7,40 +7,52 @@
     <title>Document</title>
 
     <script type="text/javascript">
-        /* 轉換為Boolean類型 */
+        /* + 運算 */
+        // 字符串不會轉換為數字, 任何值和字符串拼接都會轉換為字符串
 
-        /* Boolean() */
+        var a = 123;
+        var result = typeof a;
+        console.log(typeof result); // Return string
+        console.log(result); // Return "number"
 
-        // Number -> Boolean
-        var a = 123; // -123, Infinity
-        a = Boolean(a);
-        console.log(typeof a); // Return boolean
-        console.log(a); // Return true
+        var b = true + false; // 1 + 0
+        console.log(b); // Return 1
 
-        var b = 0 // NaN
-        b = Boolean(b);
-        console.log(typeof b); // Return boolean
-        console.log(b); // Return false
+        var c = 2 + null;
+        console.log(c); // Return 2
 
-        // String -> Boolean
-        var c = "false"; // " " 
-        c = Boolean(c);
-        console.log(typeof c); // Return boolean
-        console.log(c); // Return true
+        var d = 2 + NaN;
+        console.log(d); // Return NaN
 
-        var d = ""; 
-        d = Boolean(d);
-        console.log(typeof d); // Return boolean
-        console.log(d); // Return false
+        var str = "Hello " + "Mario";
+        console.log(str); // Return "Hello Mario"
 
-        // Null -> Boolean
-        // Return false
+        var e = 123 + "";
+        console.log(e); // Return "123"
+        console.log("e = " + e); // Return "e = 123"
 
-        // Undefined -> Boolean
-        // Return false
+        var f = 1 + 2 + "3";
+        console.log(f); // Return "33"
 
-        // Object -> Boolean
-        // Return true
+        var g = "1" + 2 + 3;
+        console.log(g); // Return "123"
+
+        /* -, *, / 運算 */
+        // 字符串會轉換為數字
+
+        var h = "123";
+        h = h - 0;
+        console.log(typeof h); // Return number
+        console.log(h); // Return 123
+
+        /* % 運算 */
+        // 取余數
+
+        var i = 9 % 3;
+        console.log(i); // Return 0
+
+        var j = 9 % 5;
+        console.log(j); // Return 4
     </script>
 </head>
 <body>
