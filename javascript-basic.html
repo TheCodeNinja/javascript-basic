@@ -7,15 +7,28 @@
     <title>Document</title>
 
     <script type="text/javascript">
-        /* 一元運算符 */
-        var a = "18";
-        a = +a;
-        console.log(typeof a); // Return "number"
-        console.log(a); // Return 18
 
-        var b = 1 + + "2" + 3; // ++"2" => number
-        console.log(typeof b); // Return "number"
-        console.log(b); // Return 6
+        /* 自增和自減 */
+
+        var a = 100;
+        console.log(a++); // 100
+        console.log(a); // 101
+
+        var b = 100;
+        console.log(++b); // 101
+        console.log(b); // 101
+
+        var c = 100;
+        c++; // c = 101
+        ++c; // c = 102
+        console.log(c++); // 102 (c = 103)
+        console.log(++c); // 104
+        console.log(c); // 104
+
+        var d = 100;
+        var result = d++ + ++d + d; // 100 + 102 + 102
+        console.log(result); // 304
+       
     </script>
 </head>
 <body>
