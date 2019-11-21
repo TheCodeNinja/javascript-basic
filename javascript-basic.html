@@ -8,25 +8,16 @@
 
     <script type="text/javascript">
 
-        /* >, <, >=, <= */
+        /* Output unicode characters */
 
-        cosole.log(1 > true); // false (as true = 1)
-        console.log(1 >= true); // true
-        console.log(1 > "0"); // true (as "0" = 0) 
-        console.log(1 > null); // true (as null = 0)
-        console.log(10 > "Hello"); // false (as "Hello" = NaN)
+        // Output unicode character in JavaScript \u[unicode(16)]
+        console.log("\u2620");
         
-        // Special case (both sides are string)
-        console.log("10" < "5"); // true (as 1's unicode < 5's unicode)
-        console.log("abc" < "b"); // true (as a's unicode < b's unicode)
-        console.log("abc" < "bcd"); // true (as a's unicode < b's unicode)
-
-        // Transform string to number
-        console.log("10" < +"5"); // false (as +"5" transforms to 5)
-        
-    </script>
+</script>
 </head>
 <body>
+    <!-- Output unicode character in HTML &#[unicode(10)] -->
+    <h1>&#9760</h1>
 
 </body>
 </html> 
