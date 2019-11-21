@@ -8,27 +8,16 @@
 
     <script type="text/javascript">
 
-        /* ==, !=, ===, !== */
+        /* Ternary Operator */
 
-        // ==
-        console.log(true == '1'); // true (as true = 1 and '1' = 1)
+        var a = 30;
+        var b = 20;
+        var max = a > b ? a : b;
+        console.log("max " + max); // max = 30
 
-        console.log(null == 0); // false (as null != 0)
-        console.log(undefined == null); // true
-        console.log(NaN == undefined); // false
-        console.log(NaN == NaN); // false (as NaN != anyone)
-
-        // isNaN()
-        var b = NaN;
-        // console.log(b == NaN); // Wrong
-        console.log(isNaN(b)); // true
-
-        // !=
-        console.log("1" != 1); // false (as "1" = 1)
-
-        // == vs ===
-        console.log("12" == 12); // true
-        console.log("12" === 12); // false
+        var c = 50;
+        var max2 = a > b ? (a > c ? a : c) : (b > c ? b : c);
+        console.log("max2 " + max2); // max2 = 50
 
 </script>
 </head>
