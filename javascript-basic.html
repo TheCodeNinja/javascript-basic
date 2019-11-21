@@ -8,27 +8,30 @@
 
     <script type="text/javascript">
 
-        /* 自增和自減 */
+        /* !, &&, || */
 
-        var a = 100;
-        console.log(a++); // 100
-        console.log(a); // 101
+        var a = 10;
+        a = !a;
+        console.log("a = " + a); // a = false
+        console.log(typeof a); // boolean
 
-        var b = 100;
-        console.log(++b); // 101
-        console.log(b); // 101
-
-        var c = 100;
-        c++; // c = 101
-        ++c; // c = 102
-        console.log(c++); // 102 (c = 103)
-        console.log(++c); // 104
-        console.log(c); // 104
-
-        var d = 100;
-        var result = d++ + ++d + d; // 100 + 102 + 102
-        console.log(result); // 304
+        var b = 10;
+        b = !!b;    
+        console.log("b = " + b); // a = true
+        console.log(typeof b); // boolean
        
+        var c = 1 && 2;
+        console.log(c); // 2
+
+        var d = 0 && 2; // 0 && NaN
+        console.log(d); // 0
+
+        var e = 1 || 0;
+        console.log(e); // 1
+
+        var f = 0 || NaN;
+        console.log(f); // NaN
+        
     </script>
 </head>
 <body>
