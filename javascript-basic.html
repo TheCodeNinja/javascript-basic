@@ -8,16 +8,14 @@
 
     <script type="text/javascript">
 
-        /* Ternary Operator */
+        /* Operator precedence */
 
-        var a = 30;
-        var b = 20;
-        var max = a > b ? a : b;
-        console.log("max " + max); // max = 30
+        var result = 1 || 2 && 3;
+        console.log(result); // 1 (as && executes first)
 
-        var c = 50;
-        var max2 = a > b ? (a > c ? a : c) : (b > c ? b : c);
-        console.log("max2 " + max2); // max2 = 50
+        // Use () to determine the order
+        var result2 = (1 || 2) && 3;
+        console.log(result2); // 3 (as () executes first)
 
 </script>
 </head>
