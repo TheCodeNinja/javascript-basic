@@ -8,14 +8,56 @@
 
     <script type="text/javascript">
 
-        /* Operator precedence */
+        /* 1. Print the number count and sum of 'multiple of 7' between 1 and 100 */
 
-        var result = 1 || 2 && 3;
-        console.log(result); // 1 (as && executes first)
+        var count = 0;
+        var sum = 0;
 
-        // Use () to determine the order
-        var result2 = (1 || 2) && 3;
-        console.log(result2); // 3 (as () executes first)
+        for (var i=1; i<=100; i++) {
+            if (i%7 == 0) {
+                sum += i;
+                count++;
+            }
+        }
+
+        console.log("sum " + sum);
+        console.log("count " + count);
+
+        /* 2. Narcissistic number */
+
+        // A number that is the sum of its own digits 
+        // each raised to the power of the number of digits it has
+        for (var i=100; i<1000; i++) {
+            var hundred = parseInt(i / 100);
+            var ten = parseInt((i - hundred * 100) / 10);
+            var one = i % 10;
+
+            if (hundred*hundred*hundred + ten*ten*ten + one*one*one == i) {
+                console.log(i);
+            }
+        }
+
+        /* 3. Prime number */
+
+        var num = prompt('Please input a number');
+
+        if (num <= 1) {
+            alert("Number should be bigger than 1");
+        } 
+        else {
+            var flag = true;
+            for (var i=2; i<num; i++) {
+                if (num % i == 0) {
+                    flag = false;
+                }
+            }
+            if (flag) {
+                alert(num + "is a prime number");
+            }
+            else {
+                alert(num + "is not a prime number");
+            }
+        }
 
 </script>
 </head>
